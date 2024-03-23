@@ -14,7 +14,7 @@ export const handler = function (event, context, callback) {
         var decoded = jwt.verify(authToken, JWT_SECRET);
         console.log(`payload decoded: ${JSON.stringify(decoded)}`);
 
-        let principalId = decoded.cliente.codigo;
+        let principalId = decoded.userId;
 
         // build apiOptions for the AuthPolicy
         let apiOptions = {};
